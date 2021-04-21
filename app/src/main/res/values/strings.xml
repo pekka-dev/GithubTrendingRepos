@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Github Trending Repos</string>
+    <string name="sample_repo_name">Github Trending Repository</string>
+    <string name="sample_repo_lang">Kotlin</string>
+    <string name="sample_repo_full_name">Gsangi/Github-Trending-Repos</string>
+    <string name="sample_repo_private">Public</string>
+    <string name="repo_private_helper">Visibility: </string>
+    <string name="sample_repo_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="repo_list_item_expand_button">Expand Card</string>
+    <string name="repo_list_item_goto_button">Goto Repo</string>
+    <string name="repo_load_state_footer_error">Repos can not be loaded</string>
+    <string name="retry">Retry</string>
+    <string name="retry_error_text">Unable to load Repos</string>
+    <string name="no_repo_found">No Repo Found</string>
+    <string name="change_date">Change Date</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">Submit</string>
+    <string name="refresh">Refresh</string>
+</resources>

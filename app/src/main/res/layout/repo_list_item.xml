@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/repo_list_item_margin"
+    app:cardElevation="@dimen/repo_list_item_card_elevation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_collapsed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/repo_list_item_padding">
+
+            <TextView
+                android:id="@+id/repoListItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/repo_list_item_title_margin_end"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/repo_list_item_title"
+                tools:text="@string/sample_repo_name" />
+
+            <TextView
+                android:id="@+id/repoListItemLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/repoListItemTitle"
+                android:layout_marginTop="@dimen/repo_list_item_lang_margin_top"
+                android:textSize="@dimen/repo_list_item_lang"
+                tools:text="@string/sample_repo_lang" />
+
+            <ImageView
+                android:id="@+id/expandCardButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/repo_list_item_expand_button"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_expanded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_collapsed"
+            android:paddingStart="@dimen/repo_list_item_padding"
+            android:paddingEnd="@dimen/repo_list_item_padding"
+            android:paddingBottom="@dimen/repo_list_item_padding"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/repoListItemFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/repo_list_item_full_name"
+                tools:text="@string/sample_repo_full_name" />
+
+            <TextView
+                android:id="@+id/repoListItemDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repoListItemFullName"
+                android:layout_marginBottom="@dimen/repo_list_item_description_margin_bottom"
+                tools:text="@string/sample_repo_description" />
+
+
+            <TextView
+                android:id="@+id/repoListItemPrivateHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repoListItemDescription"
+                android:text="@string/repo_private_helper"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/repoListItemPrivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repoListItemDescription"
+                android:layout_toEndOf="@id/repoListItemPrivateHelper"
+                tools:text="@string/sample_repo_private" />
+
+            <Button
+                android:id="@+id/repoListItemGotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repoListItemPrivateHelper"
+                android:text="@string/repo_list_item_goto_button" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
